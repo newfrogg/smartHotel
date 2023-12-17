@@ -1,0 +1,67 @@
+.dashboard{
+    padding:10px;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+}
+.dash-block{
+    margin:10px;
+    height:100%;
+    border-radius: 30px;
+}
+.room-count{
+    display:flex;
+    flex-direction: row;
+}
+.dash-total{
+    font-size:60px;
+    font-weight: bolder;
+}
+.room-count-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    padding: 10px 40px;
+}
+
+.room-count-last{
+    display:flex;
+    align-items: end;
+    flex-direction: column;
+    
+}
+.dash-side-block{
+    width:100%;
+}
+.weather-icon{
+    height: 130px;
+    width: 130px;
+}
+.dash-main-weather{
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.dash-main-wind{
+    font-size: 35px;
+    align-items: end;
+}
+.dash-total-rooms{
+    background-image: url('/dash_back/first_back.png');
+    color:rgb(252, 236, 236);
+    background-position: bottom;
+}
+.dash-rooms{
+    background-image: url('/dash_back/second_back.png');
+    background-size:cover;
+    color:rgb(44, 41, 41);
+    background-position: top;
+}
+.dash-temp{
+    background-image: linear-gradient(to left, rgb(6, 106, 255) , rgb(74, 42, 255));
+    color:rgb(44, 41, 41);
+}
+.dash-icon{
+    align-items: center;
+}

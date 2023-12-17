@@ -1,0 +1,122 @@
+[
+    {
+        "roomNumber":101,
+        "roomType":"Standard",
+        "roomRate":100,
+        "roomCapacity":2,
+        "roomStatus":"Vacant",
+        "features":["Queen bed","TV","Air conditioning"]
+    },
+    {
+        "roomNumber":205,
+        "roomType":"Suite",
+        "roomRate":150,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Balcony"]
+    },
+    {
+        "roomNumber":201,
+        "roomType":"Suite",
+        "roomRate":250,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Living room"]
+    },
+    {
+        "roomNumber":101,
+        "roomType":"Standard",
+        "roomRate":100,
+        "roomCapacity":2,
+        "roomStatus":"Vacant",
+        "features":["Queen bed","TV","Air conditioning"]
+    },
+    {
+        "roomNumber":205,
+        "roomType":"Suite",
+        "roomRate":150,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Balcony"]
+    },
+    {
+        "roomNumber":201,
+        "roomType":"Suite",
+        "roomRate":250,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Living room"]
+    },
+    {
+        "roomNumber":101,
+        "roomType":"Standard",
+        "roomRate":100,
+        "roomCapacity":2,
+        "roomStatus":"Vacant",
+        "features":["Queen bed","TV","Air conditioning"]
+    },
+    {
+        "roomNumber":205,
+        "roomType":"Suite",
+        "roomRate":150,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Balcony"]
+    },
+    {
+        "roomNumber":201,
+        "roomType":"Suite",
+        "roomRate":250,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Living room"]
+    },
+    {
+        "roomNumber":101,
+        "roomType":"Standard",
+        "roomRate":100,
+        "roomCapacity":2,
+        "roomStatus":"Vacant",
+        "features":["Queen bed","TV","Air conditioning"]
+    },
+    {
+        "roomNumber":205,
+        "roomType":"Suite",
+        "roomRate":150,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Balcony"]
+    },
+    {
+        "roomNumber":201,
+        "roomType":"Suite",
+        "roomRate":250,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Living room"]
+    },
+    {
+        "roomNumber":101,
+        "roomType":"Standard",
+        "roomRate":100,
+        "roomCapacity":2,
+        "roomStatus":"Vacant",
+        "features":["Queen bed","TV","Air conditioning"]
+    },
+    {
+        "roomNumber":205,
+        "roomType":"Suite",
+        "roomRate":150,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Balcony"]
+    },
+    {
+        "roomNumber":201,
+        "roomType":"Suite",
+        "roomRate":250,
+        "roomCapacity":4,
+        "roomStatus":"Occupied",
+        "features":["King bed","TV","Mini fridge","Living room"]
+    }
+]
