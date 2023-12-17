@@ -1,0 +1,14 @@
+[
+    {
+        "roomOccupied": 15,
+        "roomEmpty": 10,
+        "totalRoom": 3,
+        "time": "2023-10-08T07:30:00.000+00:00"
+    },
+    {
+        "roomOccupied": 15,
+        "roomEmpty": 15,
+        "totalRoom": 30,
+        "time": "2023-10-05T07:30:00.000+00:00"
+    }
+]
