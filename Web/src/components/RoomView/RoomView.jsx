@@ -1,5 +1,4 @@
 import React from "react";
-
 import './RoomView.css'
 
 import FeatureCard from "../FeatureCard/FeatureCard";
@@ -8,7 +7,6 @@ import ControlCard from "../ControlCard/ControlCard";
 import DetailCard from "../DetailCard/DetailCard";
 import NotificationCard from "../NotificationCard/NotificationCard";
 import Chart from "../Chart/Chart";
-
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -19,7 +17,7 @@ export default function RoomView({ roomDetail, setRoomDetail }) {
     const [show, setShow] = React.useState(false);
 
     const detailKey = ["roomType", "roomPrice", "roomCapacity", "roomStatus"]
-    const statusKey = ["temperature", "moisture", "lightLevel"]
+    const statusKey = ["temperature", "humidity", "light_level"]
     const controlKey = ["lightStatus", "fanStatus", "rotorStatus"]
     const chartKey = [
         {
