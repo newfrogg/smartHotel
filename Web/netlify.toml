@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/hotel/*"
+  to = "http://localhost:5173/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
