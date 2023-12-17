@@ -1,0 +1,79 @@
+from mqtt import *
+import urequests
+import gc
+import ujson
+from yolobit import *
+button_a.on_pressed = None
+button_b.on_pressed = None
+button_a.on_pressed_ab = button_b.on_pressed_ab = -1
+from aiot_rgbled import RGBLed
+import time
+from machine import Pin, SoftI2C
+from aiot_dht20 import DHT20
+
+tiny_rgb = RGBLed(pin0.pin, 4)
+
+def on_http_response_successed_callback():
+  bulb = ujson.loads((http_response.text))['lightStatus']
+  fan = ujson.loads((http_response.text))['fanStatus']
+  rotor = ujson.loads((http_response.text))['rotorStatus']
+  if bulb == True:
+    tiny_rgb.show(0, hex_to_rgb('#ffff00'))
+  if bulb == False:
+    tiny_rgb.show(0, hex_to_rgb('#ff0000'))
+  if fan == True:
+    pin10.write_analog(round(translate(70, 0, 100, 0, 1023)))
+  if fan == False:
+    pin10.write_analog(round(translate(0, 0, 100, 0, 1023)))
+  if rotor == True:
+    pin4.servo_write(90)
+  if rotor == False:
+    pin4.servo_write(0)
+
+def on_http_response_failed_callback():
+  print('Fail')
+
+aiot_dht20 = DHT20(SoftI2C(scl=Pin(22), sda=Pin(21)))
+
+def on_button_a_pressed():
+  global rotor, fan, bulb, temperature, humidity, lighting, degree, http_response
+  pass
+
+button_a.on_pressed = on_button_a_pressed
+
+def on_button_b_pressed():
+  global rotor, fan, bulb, temperature, humidity, lighting, degree, http_response
+  rotor = not rotor
+
+button_b.on_pressed = on_button_b_pressed
+
+if True:
+  mqtt.connect_wifi('Orangethefish', '28122002')
+  fan = False
+  bulb = False
+  rotor = False
+  humidity = 0
+  temperature = 0
+  lighting = 0
+  degree = 0
+
+while True:
+  gc.collect()
+  http_response = urequests.post('https://hhh-md804wmi.b4a.run/hotel/bidirectionalSensorData/101', data=None, json=({
+    "temperature" : temperature,
+    "moisture" : humidity,
+    "lightLevel" : lighting,
+    "lightStatus" : bulb,
+    "fanStatus" : fan,
+    "rotorStatus" : rotor
+  }), headers=({
+    "Content-type" : 'application/json'
+  }))
+  http_response.on_successed(on_http_response_successed_callback)
+  http_response.on_failed(on_http_response_failed_callback)
+  time.sleep_ms(100)
+  aiot_dht20.read_dht20()
+  temperature = aiot_dht20.dht20_temperature()
+  humidity = aiot_dht20.dht20_humidity()
+  lighting = translate((pin2.read_analog()), 0, 4095, 0, 100)
+
