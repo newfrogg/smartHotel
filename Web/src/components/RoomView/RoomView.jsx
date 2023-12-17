@@ -17,7 +17,7 @@ export default function RoomView({ roomDetail, setRoomDetail }) {
     const [show, setShow] = React.useState(false);
 
     const detailKey = ["roomType", "roomPrice", "roomCapacity", "roomStatus"]
-    const statusKey = ["temperature", "humidity", "light_level"]
+    const statusKey = ["temperature", "moisture", "lightLevel"]
     const controlKey = ["lightStatus", "fanStatus", "rotorStatus"]
     const chartKey = [
         {
